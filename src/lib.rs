@@ -1368,6 +1368,7 @@ impl OptOrd for char {
 /// value, at the cost of removing one particular `None` value from the value
 /// domain (see `Noned`)
 #[derive(Copy, Clone)]
+#[repr(transparent)]
 pub struct Optioned<T: Noned + Copy> {
     value: T,
 }
